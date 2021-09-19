@@ -20,8 +20,7 @@ const displayData = data => {
     data.forEach(
         photo => (document.querySelector('.card-deck').innerHTML += `
             <div class="card" id="image-${photo.date}">
-                <img class="card-img-top" src=${photo.hdurl} alt=${photo.url} style="height:55vh!important">
-                
+                <img class="card-img-top" src=${photo.hdurl} alt="Image Unavailable" style="height:55vh!important">
                 <div class="card-body">
                     <h5 class="card-title">${photo.title} - ${photo.date}</h5>
                     <p class="card-text">${photo.explanation}</p>
