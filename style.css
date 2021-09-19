@@ -36,7 +36,6 @@ photo {
     box-shadow: 5px 5px 10px #333;
     position: relative;
     border-color: white;
-
 }
 
 img {
@@ -48,6 +47,25 @@ img {
 .details{
     padding:10px;
 }
+
+.like{
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    top:2%;
+    right: 2%;
+}
+
+.like-no{
+    background: url("./img/icons8-like-64.png") no-repeat
+}
+
+.like-yes{
+    background: url("./img/heart\ \(1\).png") no-repeat
+
+}
+
+
 
 .card{
     flex: 2 0 40%!important;
