@@ -19,24 +19,18 @@ const displayData = data => {
     
     data.forEach(
         photo => (document.querySelector('.card-deck').innerHTML += `
-            <div class="card" id="image-${photo.date}" style="flex: 1 0 40%;">
-                <img class="card-img-top" src=${photo.hdurl} alt="Card image cap">
-
+            <div class="card" id="image-${photo.date}">
+                <img class="card-img-top" src=${photo.hdurl} alt=${photo.url} style="height:55vh!important">
+                
                 <div class="card-body">
-                    <h5 class="card-title">${photo.title}</h5>
+                    <h5 class="card-title">${photo.title} - ${photo.date}</h5>
                     <p class="card-text">${photo.explanation}</p>
                 <button type="button" class="btn btn-primary">Like</button>
 
                 </div>
 
-                
-                <div class="card-footer">
-                    <small class="text-muted">${photo.date}</small>
-                </div>
             </div>
-        
-
-            
+     
         `)
       );
 
