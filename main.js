@@ -16,7 +16,10 @@ const fetchNASAData = async () => {
 document.addEventListener("DOMContentLoaded", fetchNASAData)
 
 const displayData = (data) =>{
+
     const images = document.querySelector("#image-container")
+    
+    images.innerHTML = ""
 
     const imagesArray = [];
 
@@ -35,8 +38,8 @@ const createCardElements = () => {
     const photo = document.createElement("photo")
     const img = document.createElement("img")
     const details = document.createElement('div')
-    const title = document.createElement("h2")
-    const date = document.createElement("h4")
+    const title = document.createElement("h4")
+    const date = document.createElement("h5")
     const explanation = document.createElement("p")
     const like = document.createElement("div")
     return { photo, img, date, details, title, explanation, like}
@@ -86,8 +89,9 @@ const listenForLikes = () => {
 const getFaveData = (elem) =>{
     const parent = elem.parentElement
     const img = parent.querySelector('img').src
-    const title = parent.querySelector("h2").textContent
+    const title = parent.querySelector("h4").textContent
     const explanation = parent.querySelector("p").textContent
+    const date = parent.querySelector("h5").textContent
 
     const favObj = {img, title, explanation}
     console.log(favObj);
