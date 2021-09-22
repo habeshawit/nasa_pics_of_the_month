@@ -65,16 +65,3 @@ img {
     background: url("./img/Red-heart.svg") no-repeat
 
 }
-
-
-
-.card{
-    flex: 2 0 40%!important;
-    margin: 50px;
-}
-
-.header{
-    text-align: center;
-    margin:20px;
-}
-
